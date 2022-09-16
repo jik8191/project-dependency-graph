@@ -1,0 +1,84 @@
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Regular.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/ttf/JetBrainsMono-Regular.ttf")
+      format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  font-family: "JetBrainsMono", sans-serif;
+}
+
+.MuiBreadcrumbs-root {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 4px 8px;
+  border-radius: 0 0 4px 0;
+}
+
+.react-flow__renderer {
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.react-flow.hide-zoom-in .react-flow__renderer {
+  transition: none;
+  opacity: 0;
+}
+
+.react-flow__node {
+  transition: box-shadow 0.2s;
+}
+
+.react-flow__node.selected {
+  border-color: #5bb7ff;
+}
+
+.react-flow__node-default {
+  box-shadow: 1px 2px 5px #999;
+  padding: 0 !important;
+}
+
+.react-flow__edge {
+  cursor: pointer;
+}
+
+.react-flow__edge.critical-path .react-flow__edge-path {
+  stroke: black;
+  stroke-width: 2;
+}
+
+.react-flow__edge.selected .react-flow__edge-path {
+  stroke: #5bb7ff;
+}
+
+.node {
+  padding: 8px;
+  transition: background 0.5s;
+}
+
+.name {
+  word-break: break-word;
+}
+
+.duration {
+  font-size: 8px;
+  opacity: 0.75;
+  text-align: left;
+  margin-top: 4px;
+}
+
+.form-row {
+  margin-bottom: 16px;
+}

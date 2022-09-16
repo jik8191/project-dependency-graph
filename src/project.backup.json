@@ -1,0 +1,309 @@
+{
+  "tasks": [
+    {
+      "position": {
+        "x": 20,
+        "y": 100
+      },
+      "number": 1,
+      "status": "done",
+      "name": "Architecture",
+      "dependencies": [],
+      "slug": "architecture",
+      "days": 60,
+      "subTasks": [],
+      "id": "6b328b3a-6602-4043-b87c-0ad436fba774"
+    },
+    {
+      "slug": "nested-structure",
+      "id": "d57a574b-0abb-4942-86d4-760b976080c0",
+      "position": {
+        "x": 322,
+        "y": 120
+      },
+      "days": 60,
+      "subTasks": [
+        {
+          "slug": "add-ability-to-write-to-db",
+          "position": {
+            "y": 440,
+            "x": 0
+          },
+          "name": "Add ability to write to DB",
+          "dependencies": [],
+          "subTasks": [],
+          "number": 1,
+          "id": "4051a8c0-984e-472c-b9b3-8686a21ccaa5",
+          "status": "done",
+          "days": 2
+        },
+        {
+          "status": "done",
+          "number": 2,
+          "days": 10,
+          "position": {
+            "x": 222,
+            "y": 370
+          },
+          "dependencies": ["4051a8c0-984e-472c-b9b3-8686a21ccaa5"],
+          "name": "Add ability to create segments",
+          "id": "9025da7f-ec6c-4eb3-b6a0-397047623086",
+          "slug": "add-ability-to-create-segments",
+          "subTasks": []
+        },
+        {
+          "subTasks": [
+            {
+              "id": "6e8289b1-2f8d-4518-aa87-09d7f60efc20",
+              "slug": "contentaccess-recordsegmentrelationships",
+              "status": "done",
+              "name": "contentAccess.recordSegmentRelationships",
+              "number": 1,
+              "dependencies": [],
+              "position": {
+                "y": 340,
+                "x": 0
+              },
+              "subTasks": []
+            },
+            {
+              "dependencies": [],
+              "position": {
+                "y": 480,
+                "x": 0
+              },
+              "subTasks": [],
+              "id": "900d8a0e-aeb4-4ee7-9754-0f205c44d430",
+              "slug": "validationengine-validatesegmentrelationship",
+              "name": "validationEngine.validateSegmentRelationship",
+              "status": "done",
+              "number": 2
+            },
+            {
+              "name": "contentManager.recordSegmentRelationships",
+              "dependencies": [
+                "6e8289b1-2f8d-4518-aa87-09d7f60efc20",
+                "900d8a0e-aeb4-4ee7-9754-0f205c44d430"
+              ],
+              "id": "1c1612a5-6678-4f22-bde7-2443b97b5f78",
+              "slug": "contentmanager-recordsegmentrelationships",
+              "position": {
+                "x": 242,
+                "y": 410
+              },
+              "number": 3,
+              "subTasks": [],
+              "status": "done"
+            }
+          ],
+          "dependencies": ["4051a8c0-984e-472c-b9b3-8686a21ccaa5"],
+          "name": "Add ability to create segment relationships",
+          "number": 3,
+          "id": "0ff153df-0f4d-446d-85e8-3a52465d9a15",
+          "position": {
+            "y": 560,
+            "x": 202
+          },
+          "days": 2,
+          "status": "done",
+          "slug": "add-ability-to-create-segment-relationships"
+        },
+        {
+          "days": "5",
+          "dependencies": ["5e066479-9fcd-427f-af37-ab66559cdfc3"],
+          "position": {
+            "y": 286,
+            "x": 676
+          },
+          "id": "4586c2a3-f0ea-458d-a434-4113ae203829",
+          "number": 4,
+          "subTasks": [],
+          "status": "in-progress",
+          "slug": "write-new-and-updated-channels-to-segments",
+          "name": "Write new and updated channels to segments"
+        },
+        {
+          "dependencies": ["4586c2a3-f0ea-458d-a434-4113ae203829"],
+          "id": "4abae5cb-1229-4542-b646-170a974a9684",
+          "status": "not-started",
+          "position": {
+            "x": 886,
+            "y": 290
+          },
+          "number": 5,
+          "days": "2",
+          "slug": "copy-current-channels-to-segments",
+          "subTasks": [],
+          "name": "Copy current channels to segments"
+        },
+        {
+          "position": {
+            "y": 420,
+            "x": 684
+          },
+          "slug": "add-ability-to-fetch-a-segment-and-all-its-children",
+          "subTasks": [],
+          "days": "11",
+          "number": 6,
+          "id": "94c2909e-ddd2-47e0-a393-5f607f0d8826",
+          "name": "Add ability to fetch a segment and all its children",
+          "dependencies": ["5e066479-9fcd-427f-af37-ab66559cdfc3"],
+          "status": "not-started"
+        },
+        {
+          "dependencies": ["5e066479-9fcd-427f-af37-ab66559cdfc3"],
+          "position": {
+            "y": 560,
+            "x": 684
+          },
+          "status": "not-started",
+          "name": "Add missing validation rules",
+          "number": 7,
+          "id": "a9d2c8b2-441c-4079-a8b6-c5539cdf589d",
+          "subTasks": [],
+          "days": 2,
+          "slug": "add-missing-validation-rules"
+        },
+        {
+          "slug": "show-nested-segments-in-the-ui",
+          "days": 10,
+          "dependencies": [
+            "94c2909e-ddd2-47e0-a393-5f607f0d8826",
+            "4abae5cb-1229-4542-b646-170a974a9684"
+          ],
+          "name": "Show nested segments in the UI",
+          "position": {
+            "x": 1148,
+            "y": 420
+          },
+          "subTasks": [],
+          "id": "f558522d-3061-4d63-a1f9-12ebfdf9e4c1",
+          "number": 8,
+          "status": "not-started"
+        },
+        {
+          "name": "Update precommit to run tests in service layers",
+          "position": {
+            "y": 540,
+            "x": 440
+          },
+          "number": 9,
+          "days": "5",
+          "id": "671abdce-2b68-41ac-be64-a8ffdf958f3f",
+          "slug": "update-precommit-to-run-tests-in-service-layers",
+          "status": "done",
+          "subTasks": [],
+          "dependencies": []
+        },
+        {
+          "status": "in-progress",
+          "days": "5",
+          "position": {
+            "x": 440,
+            "y": 420
+          },
+          "number": 10,
+          "subTasks": [],
+          "slug": "write-segment-relationship-data-to-dvs",
+          "dependencies": [
+            "0ff153df-0f4d-446d-85e8-3a52465d9a15",
+            "9025da7f-ec6c-4eb3-b6a0-397047623086"
+          ],
+          "name": "Write segment & relationship data to DVS",
+          "id": "5e066479-9fcd-427f-af37-ab66559cdfc3"
+        }
+      ],
+      "number": 2,
+      "dependencies": ["6b328b3a-6602-4043-b87c-0ad436fba774"],
+      "name": "Nested structure",
+      "status": "in-progress"
+    },
+    {
+      "name": "Jusy right rail",
+      "days": 20,
+      "subTasks": [],
+      "status": "not-started",
+      "id": "815b2689-c816-4059-96a4-a01ce0c1c33c",
+      "number": 3,
+      "dependencies": ["6b328b3a-6602-4043-b87c-0ad436fba774"],
+      "position": {
+        "x": 544,
+        "y": -40
+      },
+      "slug": "jusy-right-rail"
+    },
+    {
+      "name": "Templates",
+      "slug": "templates",
+      "number": 4,
+      "position": {
+        "x": 786,
+        "y": 40
+      },
+      "dependencies": [
+        "815b2689-c816-4059-96a4-a01ce0c1c33c",
+        "bac50a93-ed57-416d-881e-da66facb0b5a"
+      ],
+      "days": 30,
+      "status": "not-started",
+      "id": "1a0db219-b95e-4f14-8697-52713127642f",
+      "subTasks": []
+    },
+    {
+      "slug": "nested-metrics",
+      "name": "Nested metrics",
+      "dependencies": ["d57a574b-0abb-4942-86d4-760b976080c0"],
+      "number": 5,
+      "position": {
+        "y": 120,
+        "x": 544
+      },
+      "id": "bac50a93-ed57-416d-881e-da66facb0b5a",
+      "subTasks": [
+        {
+          "name": "New task",
+          "status": "not-started",
+          "id": "f4c5b3e0-828f-46be-ad0b-c69f2357177d",
+          "number": 1,
+          "slug": "new-task",
+          "position": {
+            "y": -140,
+            "x": 240
+          },
+          "subTasks": [],
+          "dependencies": []
+        },
+        {
+          "subTasks": [],
+          "name": "New task 1",
+          "position": {
+            "x": 280,
+            "y": 60
+          },
+          "status": "not-started",
+          "slug": "new-task-1",
+          "number": 2,
+          "dependencies": ["f4c5b3e0-828f-46be-ad0b-c69f2357177d"],
+          "id": "3a9cbcf9-1e33-453e-98c0-d709d682bbe7"
+        }
+      ],
+      "days": "60",
+      "status": "not-started"
+    },
+    {
+      "slug": "wrapup",
+      "days": 10,
+      "subTasks": [],
+      "status": "not-started",
+      "dependencies": ["1a0db219-b95e-4f14-8697-52713127642f"],
+      "position": {
+        "y": 40,
+        "x": 1028
+      },
+      "id": "aa035652-f7ef-4cfd-9b0c-e954179c6b65",
+      "number": 6,
+      "name": "Wrapup"
+    }
+  ],
+  "name": "Curation"
+}
